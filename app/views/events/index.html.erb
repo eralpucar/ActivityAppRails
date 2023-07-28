@@ -1,0 +1,48 @@
+
+<% if user_signed_in?  %>
+  <p style="color:greenyellow"><%= notice %></p>
+  <h1>Events List</h1>
+
+  <table class="table table-striped table-striped table-hover">
+    <tr>
+      <th>Activity </th>
+      <th>Description </th>
+      <th>Place</th>
+      <th>Alone?</th>
+      <th>Show </th>
+      <th>Delete</th>
+    </tr>
+    <% @events.each do |event| %>
+      <tr>
+        <% if event.user==current_user%>
+        <td><%= event.activity%></td>
+        <td><%=event.description %></td>
+        <td><%=event.place %></td>
+        <td><%=event.alone %></td>
+        <td><%=link_to "Show",event,class:"btn btn-outline-info" %></td>
+        <td><%=button_to "Delete", event, method: :delete,class:"btn btn-outline-danger" %></td>
+          <% end %>
+      </tr>
+    <% end %>
+  </table>
+  <% if user_signed_in? %>
+  <%=link_to "New Event",new_event_path,class:"btn btn-success"%>
+  <% end %>
+<%else %>
+  <p style="color:red"><%= notice %></p>
+  <h1>Home page...</h1>
+  <p>Welcome...</p>
+<%end %>
+
+
+
+
+
+
+
+
+
+
+
+
+

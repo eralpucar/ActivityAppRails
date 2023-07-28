@@ -1,0 +1,16 @@
+
+<div class="card">
+  <div class="card-header"><h1>Editing event</h1></div>
+  <div class="card-body">
+<%= render "form", event: @event %>
+
+<br>
+
+<div>
+  <%= link_to "Show this event", @event,class:"btn btn-outline-secondary" %> |
+  <%= link_to "Back to events", events_path,class:"btn btn-outline-secondary" %>
+  <br><br>
+  <%= button_to "Delete this event", @event, method: :delete,class:"btn btn-outline-danger" %>
+</div>
+</div>
+</div>
