@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my first rails project.
 
-Things you may want to cover:
+## With this app what you can do are folowings:
+### You can create account.
+### You can delete your account.
+### You can edit your profile and change your password.
+### You can create events that you will do in that day.
+### You can edit and delete events.
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
